@@ -1,9 +1,14 @@
 <template>
-    <header>
+    <header class="d-flex align-items-center justify-content-between">
+        <h1 class="fs-1 ps-5"><span class="orange">Bool</span><span class="light">Flix</span></h1>
+        
         <AppSearch @find="movieFinder()" />
     </header>
     <div id="jumbotron">
 
+    </div>
+    <div class="subtitle">
+        <h2 class="mt-3 text-white text-center">Tutti i Film e le tue serie TV preferite, <br> a portata di click!</h2>
     </div>
     <main>
         <AppSingleCard />
@@ -42,6 +47,7 @@ import AppSingleCard from './AppSingleCard.vue'
                     store.series = res.data.results;
                     console.log(store.series);
                 })
+                store.queryParameters.query = '';
             },
         }
     }
@@ -56,6 +62,14 @@ import AppSingleCard from './AppSingleCard.vue'
         z-index: 1000;
         backdrop-filter: blur(10px);
         border-bottom: 2px solid #140f23;
+
+        .orange{
+           color: #ff9310;
+        }
+
+        .light{
+            color:#98bff5;
+        }
         }
 
         #jumbotron{
