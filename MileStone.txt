@@ -1,0 +1,12 @@
+Milestone1 = Studiarsi a dovere l'API 
+
+Milestone2 = Creare un layout di base con una barra di input ed un bottone che effettueranno la chiamata all'API per filtrare i film in base al titolo. Vogliamo in più che l'API ritorni i seguenti dati "Titolo - TitoloOriginale - Lingua - Votazione".
+
+Milestone3 = Trasformare la stringa della lingua in una bandierina tenendo conto che nè l'API nè fontawesome ne dispone, Implementiamo nella ricerca anche le serie TV in modo che inserendo dati nel campo di input mi ritorni sia Film che serieTV.
+
+Milestone4 = Aggiungiamo le copertine del Film/serieTV generandole dall' API con la dimensione che preferiamo, trasformiamo la votazione da un numero decimale base 1/10 ad un numero decimale base 1/5 arrotonando per eccesso e gestire i fontawesome delle stelline piene per farlo combaciare con il numero ritornato.
+
+Milestone5 = Infine trasformiamo tutto quello che abbiamo creato finora in una webApp stampando delle card, andando on hover su queste card appariranno tutte le informazioni che abbiamo ricavato finora.
+
+Milestone6 = dare sfogo all'inventiva Migliorando la Grafica dell' App e gestendo più informazioni dell'API per migliorarne il contenuto eseguibile.
+
