@@ -10,5 +10,7 @@ export const store = reactive({
     },
     endSearch: 'search',
     endPointMovie: 'movie',
-    endPointSeries: 'tv'
+    endPointSeries: 'tv',
+    ImageURL: 'https://image.tmdb.org/t/p/w500/',
+    seeCanvas: false
 })

@@ -8,11 +8,19 @@
 
     </div>
     <div class="subtitle">
-        <h2 class="mt-3 text-white text-center">Tutti i Film e le tue serie TV preferite, <br> a portata di click!</h2>
+        <h2 class="mt-3 text-center light">Tutti i <span class="orange">Film</span> e le tue <span class="orange">serie TV</span>  preferite, <br> a portata di click!</h2>
     </div>
     <main>
-        <AppSingleCard />
+        <h1 class="orange mt-5 mb-4 title">My Films:</h1>
+        <div class="d-flex align-items-start overflow-x">
+            <AppSingleCard v-for="card, index in store.movies" :card="card"/>
+        </div>
+        <h1 class="orange mt-5 mb-4 title">My TV-Series:</h1>
+        <div class="d-flex align-items-start overflow-x">
+            <AppSingleCard  v-for="card, index in store.series" :card="card"/>
+        </div>
     </main>
+    
 </template>
 
 <script>
@@ -49,6 +57,9 @@ import AppSingleCard from './AppSingleCard.vue'
                 })
                 store.queryParameters.query = '';
             },
+            showCanvas(){
+                store.seeCanvas = true
+            }
         }
     }
 </script>
@@ -63,14 +74,18 @@ import AppSingleCard from './AppSingleCard.vue'
         backdrop-filter: blur(10px);
         border-bottom: 2px solid #140f23;
 
-        .orange{
-           color: #ff9310;
-        }
+        
+    }
+    .orange{
+       color: #ff9310;
+    }
+    .light{
+        color:#98bff5;
+    }
 
-        .light{
-            color:#98bff5;
-        }
-        }
+    .bg-purple{
+        background-color: #140f23;
+    }
 
         #jumbotron{
             margin: 0 auto;
@@ -80,7 +95,34 @@ import AppSingleCard from './AppSingleCard.vue'
             background-size: cover;
             background-repeat: no-repeat;
             background-position-y: 90px;
-            border: 1px solid #98bff5;
+        }
+
+        .overflow-x{
+            overflow-x: hidden;
+            width: 90%;
+            margin: 0 auto;
+            height: 420px;
+
+            &:hover{
+                overflow-x: scroll;
+            }
+
+            &::-webkit-scrollbar {
+                height: 10px;
+            }
+
+            // &::-webkit-scrollbar-track{
+            //     background-color: #ff9310;
+            // }
+
+            &::-webkit-scrollbar-thumb{
+                background-color:#98bff5;
+                border-radius: 10px;
+            }
+        }
+
+        .title{
+            margin-left: 5vw;
         }
 
         @media screen and (max-width: 1000px) {
