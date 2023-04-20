@@ -3,6 +3,7 @@
         <div>
             <img class="none" :src="store.ImageURL + card.poster_path" alt="">
             <h3 class="show text-center">{{ card.title }}</h3>
+            <h3 class="show text-center">{{ card.name }}</h3>
         </div>
     </div>
 </template>

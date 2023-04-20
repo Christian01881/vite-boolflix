@@ -111,10 +111,6 @@ import AppSingleCard from './AppSingleCard.vue'
                 height: 10px;
             }
 
-            // &::-webkit-scrollbar-track{
-            //     background-color: #ff9310;
-            // }
-
             &::-webkit-scrollbar-thumb{
                 background-color:#98bff5;
                 border-radius: 10px;
