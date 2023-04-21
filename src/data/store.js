@@ -6,11 +6,10 @@ export const store = reactive({
     series: [],
     queryParameters: {
         api_key: '2884b9a60d325d6b3aee52d7d709d4a6',
-        query: ''
+        query: 'a'
     },
     endSearch: 'search',
     endPointMovie: 'movie',
     endPointSeries: 'tv',
     ImageURL: 'https://image.tmdb.org/t/p/w500/',
-    seeCanvas: false
 })

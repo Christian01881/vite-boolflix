@@ -57,9 +57,15 @@ import AppSingleCard from './AppSingleCard.vue'
                 })
                 store.queryParameters.query = '';
             },
-            showCanvas(){
-                store.seeCanvas = true
-            }
+        },
+        mounted(){
+            axios.get(store.URL + store.endSearch + '/' + store.endPointMovie + '?api_key=' + store.queryParameters.api_key + '&query=a').then((res)=> {
+                    store.movies = res.data.results;
+                })
+                axios.get(store.URL + store.endSearch + '/' + store.endPointSeries + '?api_key=' + store.queryParameters.api_key + '&query=a').then((res)=> {
+                    store.series = res.data.results;
+                })
+                store.queryParameters.query = '';
         }
     }
 </script>
